@@ -1,9 +1,13 @@
 /** @format */
 
+import Home from "./pages/Home";
+
 function App() {
-	return <>
-    <AppAppBar />
-  </>;
+	return (
+		<>
+			<Home />
+		</>
+	);
 }
 
 export default App;
