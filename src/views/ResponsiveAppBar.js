@@ -9,9 +9,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
@@ -20,32 +18,28 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = [
+	"Morong",
+	"Rental Appt #1",
+	"Rental Appt #2",
+	"Contact",
+	"About",
+];
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
-	const [anchorElUser, setAnchorElUser] = React.useState(null);
 
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget);
-	};
-
-	const handleOpenUserMenu = (event) => {
-		setAnchorElUser(event.currentTarget);
 	};
 
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
 
-	const handleCloseUserMenu = () => {
-		setAnchorElUser(null);
-	};
-
 	return React.createElement(
 		AppBar,
-		{ position: "static" },
+		{ position: "sticky" },
 		React.createElement(
 			Container,
 			{ maxWidth: "xl" },
@@ -65,7 +59,7 @@ const ResponsiveAppBar = () => {
 						sx: {
 							mr: 2,
 							display: { xs: "none", md: "flex" },
-							fontFamily: "monospace",
+							fontFamily: "roboto",
 							fontWeight: 700,
 							letterSpacing: ".3rem",
 							color: "inherit",
@@ -141,7 +135,7 @@ const ResponsiveAppBar = () => {
 							mr: 2,
 							display: { xs: "flex", md: "none" },
 							flexGrow: 1,
-							fontFamily: "monospace",
+							fontFamily: "roboto",
 							fontWeight: 700,
 							letterSpacing: ".3rem",
 							color: "inherit",
@@ -173,48 +167,19 @@ const ResponsiveAppBar = () => {
 				React.createElement(
 					Box,
 					{ sx: { flexGrow: 0 } },
-					React.createElement(
-						Tooltip,
-						{ title: "Open settings" },
-						React.createElement(
-							IconButton,
-							{ onClick: handleOpenUserMenu, sx: { p: 0 } },
-							React.createElement(Avatar, {
-								alt: "Remy Sharp",
-								src: "/static/images/avatar/2.jpg",
-							})
-						)
-					),
-					React.createElement(
-						Menu,
-						{
-							sx: { mt: "45px" },
-							id: "menu-appbar",
-							anchorEl: anchorElUser,
-							anchorOrigin: {
-								vertical: "top",
-								horizontal: "right",
-							},
-							keepMounted: true,
-							transformOrigin: {
-								vertical: "top",
-								horizontal: "right",
-							},
-							open: Boolean(anchorElUser),
-							onClose: handleCloseUserMenu,
+					React.createElement(Menu, {
+						sx: { mt: "45px" },
+						id: "menu-appbar",
+						anchorOrigin: {
+							vertical: "top",
+							horizontal: "right",
 						},
-						settings.map((setting) =>
-							React.createElement(
-								MenuItem,
-								{ key: setting, onClick: handleCloseUserMenu },
-								React.createElement(
-									Typography,
-									{ textAlign: "center" },
-									setting
-								)
-							)
-						)
-					)
+						keepMounted: true,
+						transformOrigin: {
+							vertical: "top",
+							horizontal: "right",
+						},
+					})
 				)
 			)
 		)
