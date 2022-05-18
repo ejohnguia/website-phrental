@@ -11,11 +11,11 @@ import ProductCTA from "../views/ProductCTA";
 import AppFooter from "../views/AppFooter";
 import withRoot from "./modules/withRoot";
 
-function Index() {
+function Contact() {
 	return (
 		<React.Fragment>
 			<ResponsiveAppBar />
-			<h1>THIS IS HOME</h1>
+			<h1>THIS IS CONTACT</h1>
 			<ProductHero />
 			{/* <ProductValues />
 			<ProductCategories />
@@ -27,4 +27,4 @@ function Index() {
 	);
 }
 
-export default withRoot(Index);
+export default withRoot(Contact);
