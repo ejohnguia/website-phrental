@@ -11,20 +11,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import FilterDramaIcon from "@mui/icons-material/FilterDrama";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-const pages = [
-	"Morong",
-	"Rental Appt #1",
-	"Rental Appt #2",
-	"Contact",
-	"About",
-];
+const title = "Sky";
+
+const pages = ["Morong", "Middle Home", "Side Home", "Contact"];
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -46,7 +42,7 @@ const ResponsiveAppBar = () => {
 			React.createElement(
 				Toolbar,
 				{ disableGutters: true },
-				React.createElement(AdbIcon, {
+				React.createElement(FilterDramaIcon, {
 					sx: { display: { xs: "none", md: "flex" }, mr: 1 },
 				}),
 				React.createElement(
@@ -66,7 +62,7 @@ const ResponsiveAppBar = () => {
 							textDecoration: "none",
 						},
 					},
-					"LOGO"
+					title
 				),
 				React.createElement(
 					Box,
@@ -121,7 +117,7 @@ const ResponsiveAppBar = () => {
 						)
 					)
 				),
-				React.createElement(AdbIcon, {
+				React.createElement(FilterDramaIcon, {
 					sx: { display: { xs: "flex", md: "none" }, mr: 1 },
 				}),
 				React.createElement(
@@ -140,9 +136,10 @@ const ResponsiveAppBar = () => {
 							letterSpacing: ".3rem",
 							color: "inherit",
 							textDecoration: "none",
+							textTransform: "uppercase",
 						},
 					},
-					"LOGO"
+					title
 				),
 				React.createElement(
 					Box,
