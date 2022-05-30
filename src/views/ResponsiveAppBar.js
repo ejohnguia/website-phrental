@@ -13,13 +13,22 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import FilterDramaIcon from "@mui/icons-material/FilterDrama";
 
+// Import fonts
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-const title = "Sky";
+// Setting up the routing
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+import Contact from "../pages/Contact";
+import Home from "../pages/Home";
+import Morong from "../pages/Morong";
+import Rent1 from "../pages/Rent1";
+import Rent2 from "../pages/Rent2";
+
+const title = "Sky";
 const pages = ["Morong", "Middle Home", "Side Home", "Contact"];
 
 const ResponsiveAppBar = () => {
