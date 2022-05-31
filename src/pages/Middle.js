@@ -11,11 +11,11 @@ import ProductCTA from "../views/ProductCTA";
 import AppFooter from "../views/AppFooter";
 import withRoot from "./modules/withRoot";
 
-function Rent2() {
+function Middle() {
 	return (
 		<React.Fragment>
 			<ResponsiveAppBar />
-			<h1>THIS IS RENT2</h1>
+			<h1>THIS IS MIDDLE</h1>
 			<ProductHero />
 			{/* <ProductValues />
 			<ProductCategories />
@@ -27,4 +27,4 @@ function Rent2() {
 	);
 }
 
-export default withRoot(Rent2);
+export default withRoot(Middle);
