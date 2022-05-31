@@ -20,19 +20,14 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 // Setting up the routing
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-import Contact from "../pages/Contact";
-import Home from "../pages/Home";
-import Morong from "../pages/Morong";
-import Rent1 from "../pages/Rent1";
-import Rent2 from "../pages/Rent2";
+import { useNavigate } from "react-router-dom";
 
 const title = "Sky";
 const pages = ["Morong", "Middle Home", "Side Home", "Contact"];
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
+	const navigate = useNavigate();
 
 	const handleOpenNavMenu = (event) => {
 		setAnchorElNav(event.currentTarget);
@@ -40,6 +35,26 @@ const ResponsiveAppBar = () => {
 
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
+	};
+
+	const handleMenuClick = (event) => {
+		setAnchorElNav(null);
+
+		switch (event.currentTarget.textContent) {
+			case "Morong":
+				navigate("/morong");
+				break;
+			case "Middle Home":
+				navigate("/middle-home");
+				break;
+			case "Side Home":
+				navigate("/side-home");
+				break;
+			case "Contact":
+				navigate("/contact");
+				break;
+			default:
+		}
 	};
 
 	return React.createElement(
@@ -116,7 +131,7 @@ const ResponsiveAppBar = () => {
 						pages.map((page) =>
 							React.createElement(
 								MenuItem,
-								{ key: page, onClick: handleCloseNavMenu },
+								{ key: page, onClick: handleMenuClick },
 								React.createElement(
 									Typography,
 									{ textAlign: "center" },
@@ -163,7 +178,7 @@ const ResponsiveAppBar = () => {
 							Button,
 							{
 								key: page,
-								onClick: handleCloseNavMenu,
+								onClick: handleMenuClick,
 								sx: { my: 2, color: "white", display: "block" },
 							},
 							page
