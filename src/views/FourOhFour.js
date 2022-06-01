@@ -10,7 +10,7 @@ export default function ProductHero() {
 		<>
 			<style
 				dangerouslySetInnerHTML={{
-					__html: "\n  body{\n    background-color: #26292E;\n color: #2E2F30;\n    font-family: sans-serif;\n    margin: 0;\n  }\n\n a {\n    color: #fff;\n  }\n\n  a:hover {\n    color: #e74c3c;\n  }\n\n  .dialog {\n    float:right;\n    text-align: left;\n    width: 60%;\n    margin: 5% auto 0;\n  }\n\n  h1 { \n    font-size: 4em;\n    color: #fff;\n    line-height: 1em;\n  }\n\n  p {\n    font-size: 1.4em;\n    color: #fff;\n    padding-right: 5%;\n  }\n  .image {\n    position: absolute;\n    float: right;\n    top: 0;\n    height: 70% width:60%;\n  }\n  @media only screen and (max-width: 1000px) {\n    .image {\n      width: 100%;\n      top: -50px;\n    }\n    .dialog {\n    float:none;\n    text-align: center;\n    width: 90%;\n    margin-top: 70%\n  }\n  }  \n  ",
+					__html: "body{background-color: #26292E; color: #2E2F30; font-family: roboto; margin: 0;} a { color: #fff;} a:hover {color: #e74c3c; } .dialog {    float:right; text-align: left; width: 60%; margin: 5% auto 0;} h1 {font-size: 4em; color: #fff; line-height: 1em; } p { font-size: 1.4em; color: #fff;    padding-right: 5%;} .image { position: absolute; float: right; top: 0; height: 70% width: 60%;} @media only screen and (max-width: 1000px) { .image {      width: 100%; height: auto ;top: -50px; } .dialog { float:none; text-align: center; width: 90%; margin-top: 70% }}",
 				}}
 			/>
 			<img src={lightBulb} className="image" alt="light bulb" />
