@@ -1,50 +1,45 @@
-import * as React from 'react';
-import Button from '../components/Button';
-import Typography from '../components/Typography';
-import ProductHeroLayout from './ProductHeroLayout';
+/** @format */
+
+import * as React from "react";
+import Typography from "../components/Typography";
+import ProductHeroLayout from "./ProductHeroLayout";
 
 const backgroundImage =
-  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80';
+	// Photo by Alee Catagatan on Unsplash
+	"https://images.unsplash.com/photo-1583831256353-e5726aa9bb20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1527&q=80";
 
 export default function ProductHero() {
-  return (
-    <ProductHeroLayout
-      sxBackground={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#7fc7d9', // Average color of the background image.
-        backgroundPosition: 'center',
-      }}
-    >
-      {/* Increase the network loading priority of the background image. */}
-      <img
-        style={{ display: 'none' }}
-        src={backgroundImage}
-        alt="increase priority"
-      />
-      <Typography color="inherit" align="center" variant="h2" marked="center">
-        Upgrade your Sundays
-      </Typography>
-      <Typography
-        color="inherit"
-        align="center"
-        variant="h5"
-        sx={{ mb: 4, mt: { sx: 4, sm: 10 } }}
-      >
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
-      </Typography>
-      <Button
-        color="secondary"
-        variant="contained"
-        size="large"
-        component="a"
-        href="/premium-themes/onepirate/sign-up/"
-        sx={{ minWidth: 200 }}
-      >
-        Register
-      </Button>
-      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-        Discover the experience
-      </Typography>
-    </ProductHeroLayout>
-  );
+	return (
+		<ProductHeroLayout
+			sxBackground={{
+				backgroundImage: `url(${backgroundImage})`,
+				backgroundPosition: "center",
+			}}
+		>
+			<img
+				style={{ display: "none" }}
+				src={backgroundImage}
+				alt="increase priority"
+			/>
+			<Typography
+				color="inherit"
+				align="center"
+				variant="h2"
+				marked="center"
+			>
+				Sky Homes
+			</Typography>
+			<Typography
+				color="inherit"
+				align="center"
+				variant="h5"
+				sx={{ mb: 4, mt: { sx: 4, sm: 10 } }}
+			>
+				Morong, Bataan
+			</Typography>
+			<Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
+				Rent a home with Sky Homes
+			</Typography>
+		</ProductHeroLayout>
+	);
 }
