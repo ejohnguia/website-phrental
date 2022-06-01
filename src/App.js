@@ -13,12 +13,12 @@ function App() {
 	return (
 		<>
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route exact path="/" element={<Home />} />
 				<Route exact path="/morong" element={<Morong />} />
-				<Route path="/middle-home" element={<Middle />} />
-				<Route path="/side-home" element={<Side />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="*" element={<Error />} />
+				<Route exact path="/middle-home" element={<Middle />} />
+				<Route exact path="/side-home" element={<Side />} />
+				<Route exact path="/contact" element={<Contact />} />
+				<Route path="/*" element={<Error />} />
 			</Routes>
 		</>
 	);

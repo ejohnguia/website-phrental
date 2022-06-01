@@ -72,10 +72,10 @@ const ResponsiveAppBar = () => {
 				React.createElement(
 					Typography,
 					{
+						onClick: () => navigate("/"),
 						variant: "h6",
 						noWrap: true,
 						component: "a",
-						href: "/",
 						sx: {
 							mr: 2,
 							display: { xs: "none", md: "flex" },
@@ -99,11 +99,11 @@ const ResponsiveAppBar = () => {
 					React.createElement(
 						IconButton,
 						{
+							onClick: handleOpenNavMenu,
 							size: "large",
 							"aria-label": "account of current user",
 							"aria-controls": "menu-appbar",
 							"aria-haspopup": "true",
-							onClick: handleOpenNavMenu,
 							color: "inherit",
 						},
 						React.createElement(MenuIcon, null)
@@ -134,7 +134,7 @@ const ResponsiveAppBar = () => {
 								{ key: page, onClick: handleMenuClick },
 								React.createElement(
 									Typography,
-									{ textAlign: "center" },
+									{ textAlign: "center", color: "black" },
 									page
 								)
 							)
@@ -147,10 +147,10 @@ const ResponsiveAppBar = () => {
 				React.createElement(
 					Typography,
 					{
+						onClick: () => navigate("/"),
 						variant: "h5",
 						noWrap: true,
 						component: "a",
-						href: "",
 						sx: {
 							mr: 2,
 							display: { xs: "flex", md: "none" },
@@ -177,8 +177,8 @@ const ResponsiveAppBar = () => {
 						React.createElement(
 							Button,
 							{
-								key: page,
 								onClick: handleMenuClick,
+								key: page,
 								sx: { my: 2, color: "white", display: "block" },
 							},
 							page
