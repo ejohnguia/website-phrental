@@ -6,6 +6,7 @@ import ProductHero from "../views/ProductHero";
 import ProductValues from "../views/ProductValues";
 import ProductCategories from "../views/ProductCategories";
 import ProductHowItWorks from "../views/ProductHowItWorks";
+import ImageCarousel from "../views/ImageCarousel";
 import ProductSmokingHero from "../views/ProductSmokingHero";
 import ProductCTA from "../views/ProductCTA";
 import AppFooter from "../views/AppFooter";
@@ -17,6 +18,7 @@ function Rentals() {
 			<ResponsiveAppBar />
 			<ProductHero />
 			<ProductValues />
+			<ImageCarousel />
 			<ProductCategories />
 			<ProductHowItWorks />
 			<AppFooter />
