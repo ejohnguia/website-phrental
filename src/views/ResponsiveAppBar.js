@@ -23,7 +23,7 @@ import "@fontsource/roboto/700.css";
 import { useNavigate } from "react-router-dom";
 
 const title = "Sky";
-const pages = ["Morong", "Middle Home", "Side Home", "Contact"];
+const pages = ["Morong", "Rentals", "Contact"];
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -44,11 +44,8 @@ const ResponsiveAppBar = () => {
 			case "Morong":
 				navigate("/morong");
 				break;
-			case "Middle Home":
-				navigate("/middle-home");
-				break;
-			case "Side Home":
-				navigate("/side-home");
+			case "Rentals":
+				navigate("/rentals");
 				break;
 			case "Contact":
 				navigate("/contact");

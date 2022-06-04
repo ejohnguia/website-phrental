@@ -11,20 +11,17 @@ import ProductCTA from "../views/ProductCTA";
 import AppFooter from "../views/AppFooter";
 import withRoot from "./modules/withRoot";
 
-function Side() {
+function Rentals() {
 	return (
 		<React.Fragment>
 			<ResponsiveAppBar />
-			<h1>THIS IS SIDE</h1>
 			<ProductHero />
-			{/* <ProductValues />
+			<ProductValues />
 			<ProductCategories />
 			<ProductHowItWorks />
-			<ProductCTA />
-			<ProductSmokingHero />
-			<AppFooter /> */}
+			<AppFooter />
 		</React.Fragment>
 	);
 }
 
-export default withRoot(Side);
+export default withRoot(Rentals);
