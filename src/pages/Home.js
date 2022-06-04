@@ -15,7 +15,6 @@ function Index() {
 	return (
 		<React.Fragment>
 			<ResponsiveAppBar />
-			<h1>THIS IS HOME</h1>
 			<ProductHero />
 			{/* <ProductValues />
 			<ProductCategories />

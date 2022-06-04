@@ -3,12 +3,16 @@
 import * as React from "react";
 import Typography from "../components/Typography";
 import ProductHeroLayout from "./ProductHeroLayout";
+import { useLocation } from "react-router-dom";
 
 const backgroundImage =
 	// Photo by Alee Catagatan on Unsplash
 	"https://images.unsplash.com/photo-1583831256353-e5726aa9bb20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1527&q=80";
 
 export default function ProductHero() {
+	const location = useLocation();
+	// const [pageTitle, setPageTitle] = React.useState("test");
+
 	return (
 		<ProductHeroLayout
 			sxBackground={{
@@ -27,7 +31,14 @@ export default function ProductHero() {
 				variant="h2"
 				marked="center"
 			>
-				Sky Homes
+				{(function () {
+					let title = location.pathname.split("/")[1];
+					if (title === "") {
+						return "Sky Homes!";
+					} else {
+						return title;
+					}
+				})()}
 			</Typography>
 			<Typography
 				color="inherit"

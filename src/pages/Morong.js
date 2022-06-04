@@ -15,7 +15,6 @@ function Morong() {
 	return (
 		<React.Fragment>
 			<ResponsiveAppBar />
-			<h1>THIS IS MORONG</h1>
 			<ProductHero />
 			{/* <ProductValues />
 			<ProductCategories />
