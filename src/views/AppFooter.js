@@ -16,30 +16,13 @@ export default function AppFooter() {
 				<Grid container spacing={5}>
 					<Grid item>
 						<Typography variant="caption">
-							{"Icons made by "}
+							{"Photos from "}
 							<Link
-								href="https://www.freepik.com"
+								href="https://unsplash.com/"
 								rel="sponsored"
-								title="Freepik"
+								title="Unsplash"
 							>
-								Freepik
-							</Link>
-							{" from "}
-							<Link
-								href="https://www.flaticon.com"
-								rel="sponsored"
-								title="Flaticon"
-							>
-								www.flaticon.com
-							</Link>
-							{" is licensed by "}
-							<Link
-								href="https://creativecommons.org/licenses/by/3.0/"
-								title="Creative Commons BY 3.0"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								CC 3.0 BY
+								Unsplash
 							</Link>
 						</Typography>
 					</Grid>
