@@ -19,7 +19,6 @@ function Rentals() {
 			<ProductHero />
 			<ProductValues />
 			<ImageCarousel />
-			<ProductCategories />
 			<ProductHowItWorks />
 			<AppFooter />
 		</React.Fragment>
