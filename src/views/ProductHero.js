@@ -11,7 +11,6 @@ const backgroundImage =
 
 export default function ProductHero() {
 	const location = useLocation();
-	// const [pageTitle, setPageTitle] = React.useState("test");
 
 	return (
 		<ProductHeroLayout
