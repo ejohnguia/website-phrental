@@ -1,26 +1,19 @@
-# @format
+# Reference: https://docs.github.com/en/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions
 
-name: Auto approve and merge PRs by dependabot
-
-# Trigger the workflow on pull request
+name: Dependabot auto-merge
 on: pull_request
 
+permissions:
+    contents: write
+    pull-requests: write
+
 jobs:
-    automerge:
-        name: Auto merge after successful checks
-        # By default, jobs run in parallel. To run the jobs sequentially, they keywords "needs" is needed.
-        # Auto merge action can be done only when the PR is approved, hence this automerge needs autoapprove as a prerequisite
-        needs: autoapprove
+    dependabot:
         runs-on: ubuntu-latest
+        if: ${{ github.actor == 'dependabot[bot]' }}
         steps:
-            - name: Auto merge
-              # Custom action for auto merging already available on marketplace
-              uses: pascalgn/automerge-action@latest
-              # Perform the auto merge action only when the PR is raised by dependabot
-              if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+            - name: Enable auto-merge for Dependabot PRs
+              run: gh pr merge --auto --merge "$PR_URL"
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_ACTIONS_TOKEN }}
-                  # By default, whenever dependabot raises a PR, it automatically assigns a label named "dependencies"
-                  # So, this action merges those PRs labelled "dependencies" only
-                  MERGE_LABELS: dependencies
-                  MERGE_METHOD: rebase
+                  PR_URL: ${{github.event.pull_request.html_url}}
+                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
